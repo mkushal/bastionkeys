@@ -1,0 +1,287 @@
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Mar04 ?        01:31:50 /usr/lib/systemd/systemd --switched-root --system --deserialize 21
+root         2     0  0 Mar04 ?        00:00:00 [kthreadd]
+root         3     2  0 Mar04 ?        00:00:00 [rcu_gp]
+root         4     2  0 Mar04 ?        00:00:00 [rcu_par_gp]
+root         6     2  0 Mar04 ?        00:00:00 [kworker/0:0H-xf]
+root         8     2  0 Mar04 ?        00:00:00 [mm_percpu_wq]
+root         9     2  0 Mar04 ?        00:05:02 [ksoftirqd/0]
+root        10     2  0 Mar04 ?        00:20:21 [rcu_sched]
+root        11     2  0 Mar04 ?        00:00:22 [migration/0]
+root        13     2  0 Mar04 ?        00:00:00 [cpuhp/0]
+root        14     2  0 Mar04 ?        00:00:00 [cpuhp/1]
+root        15     2  0 Mar04 ?        00:00:14 [migration/1]
+root        16     2  0 Mar04 ?        00:05:58 [ksoftirqd/1]
+root        18     2  0 Mar04 ?        00:00:00 [kworker/1:0H-xf]
+root        19     2  0 Mar04 ?        00:00:00 [cpuhp/2]
+root        20     2  0 Mar04 ?        00:00:22 [migration/2]
+root        21     2  0 Mar04 ?        00:03:08 [ksoftirqd/2]
+root        23     2  0 Mar04 ?        00:00:00 [kworker/2:0H-kb]
+root        24     2  0 Mar04 ?        00:00:00 [cpuhp/3]
+root        25     2  0 Mar04 ?        00:00:14 [migration/3]
+root        26     2  0 Mar04 ?        00:04:16 [ksoftirqd/3]
+root        28     2  0 Mar04 ?        00:00:00 [kworker/3:0H-kb]
+root        30     2  0 Mar04 ?        00:00:00 [kdevtmpfs]
+root        31     2  0 Mar04 ?        00:00:00 [netns]
+root        35     2  0 Mar04 ?        00:00:00 [kauditd]
+root       134     2  0 Mar04 ?        00:00:02 [khungtaskd]
+root       137     2  0 Mar04 ?        00:00:00 [oom_reaper]
+root       141     2  0 Mar04 ?        00:00:00 [writeback]
+root       145     2  0 Mar04 ?        00:00:00 [kcompactd0]
+root       251     2  0 Mar04 ?        00:00:00 [ksmd]
+root       252     2  0 Mar04 ?        00:00:03 [khugepaged]
+root       307     2  0 Mar04 ?        00:00:00 [kintegrityd]
+root       308     2  0 Mar04 ?        00:00:00 [kblockd]
+root       310     2  0 Mar04 ?        00:00:00 [blkcg_punt_bio]
+root       426     2  0 Mar04 ?        00:00:00 [tpm_dev_wq]
+root       432     2  0 Mar04 ?        00:00:00 [md]
+root       435     2  0 Mar04 ?        00:00:00 [edac-poller]
+root       440     2  0 Mar04 ?        00:00:00 [watchdogd]
+root       514  3870  0 Mar06 ?        00:19:25 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/a4bb7035473445d5afe0d8ae0555172bb7dc1369e1b65cc1c7cb61b313c34259 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+100        538   514  0 Mar06 ?        00:00:00 /usr/bin/dumb-init /bin/sh /usr/local/bin/docker-entrypoint.sh consul agent -advertise=100.66.2.66 -bind=0.0.0.0 -bootstrap-expect=3 -client=0.0.0.0 -config-dir=/consul/config -datacenter=dc1 -data-dir=/consul/data -domain=consul -hcl=connect { enabled = true } -ui -retry-join=consul-server-0.consul-server.persistent.svc:8301 -retry-join=consul-server-1.consul-server.persistent.svc:8301 -retry-join=consul-server-2.consul-server.persistent.svc:8301 -serf-lan-port=8301 -config-file=/consul/extra-config/extra-from-values.json -server
+root       577     2  0 Mar04 ?        00:00:05 [kswapd0]
+100        579   538  0 Mar06 ?        02:01:59 consul agent -advertise=100.66.2.66 -bind=0.0.0.0 -bootstrap-expect=3 -client=0.0.0.0 -config-dir=/consul/config -datacenter=dc1 -data-dir=/consul/data -domain=consul -hcl=connect { enabled = true } -ui -retry-join=consul-server-0.consul-server.persistent.svc:8301 -retry-join=consul-server-1.consul-server.persistent.svc:8301 -retry-join=consul-server-2.consul-server.persistent.svc:8301 -serf-lan-port=8301 -config-file=/consul/extra-config/extra-from-values.json -server
+root       582  3870  0 Mar06 ?        00:00:22 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/31c01778c799500af1d4954cb0533a0ec708c49738ec2e4076fcd6f2fedad3ce -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337       625   582  0 Mar06 ?        00:29:20 /usr/local/bin/pilot-agent proxy sidecar --domain persistent.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+1337       664   625  0 Mar06 ?        01:41:00 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+root       698     2  0 Mar04 ?        00:00:00 [xfsalloc]
+root       701     2  0 Mar04 ?        00:00:00 [xfs_mru_cache]
+root       708     2  0 Mar04 ?        00:00:00 [kthrotld]
+root       751     2  0 Mar04 ?        00:00:00 [nvme-wq]
+root       752     2  0 Mar04 ?        00:00:00 [nvme-reset-wq]
+root       754     2  0 Mar04 ?        00:00:00 [nvme-delete-wq]
+root       792     2  0 Mar04 ?        00:00:00 [ipv6_addrconf]
+root       802     2  0 Mar04 ?        00:00:00 [kstrp]
+root      1152  3870  0 Mar06 ?        00:06:06 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/fd0f440e223205eca5198b240c389e510e65fc45828467015c10139e34f24a39 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+100       1185  1152  0 Mar06 ?        00:00:00 /usr/bin/dumb-init /bin/sh /usr/local/bin/docker-entrypoint.sh consul agent -node=ip-100-66-2-4.af-south-1.compute.internal -advertise=100.66.2.65 -bind=0.0.0.0 -client=0.0.0.0 -node-meta=host-ip:100.66.2.4 -node-meta=pod-name:consul-client-llq6l -hcl=leave_on_terminate = true -hcl=ports { grpc = 8502 } -config-dir=/consul/config -config-dir=/consul/aclconfig -datacenter=dc1 -data-dir=/consul/data -retry-join=consul-server-0.consul-server.persistent.svc:8301 -retry-join=consul-server-1.consul-server.persistent.svc:8301 -retry-join=consul-server-2.consul-server.persistent.svc:8301 -config-file=/consul/extra-config/extra-from-values.json -domain=consul
+100       1215  1185  0 Mar06 ?        00:41:11 consul agent -node=ip-100-66-2-4.af-south-1.compute.internal -advertise=100.66.2.65 -bind=0.0.0.0 -client=0.0.0.0 -node-meta=host-ip:100.66.2.4 -node-meta=pod-name:consul-client-llq6l -hcl=leave_on_terminate = true -hcl=ports { grpc = 8502 } -config-dir=/consul/config -config-dir=/consul/aclconfig -datacenter=dc1 -data-dir=/consul/data -retry-join=consul-server-0.consul-server.persistent.svc:8301 -retry-join=consul-server-1.consul-server.persistent.svc:8301 -retry-join=consul-server-2.consul-server.persistent.svc:8301 -config-file=/consul/extra-config/extra-from-values.json -domain=consul
+root      1226  3870  0 Mar06 ?        00:00:22 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/928ea38438f48706ab8a12b41da9a3a15c5bfbfaa6716e610e5c49dde2cbcf79 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337      1261  1226  0 Mar06 ?        00:06:14 /usr/local/bin/pilot-agent proxy sidecar --domain persistent.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+1337      1308  1261  0 Mar06 ?        00:29:38 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+root      1383     2  0 Mar04 ?        00:00:00 [xfs-buf/nvme0n1]
+root      1384     2  0 Mar04 ?        00:00:00 [xfs-conv/nvme0n]
+root      1385     2  0 Mar04 ?        00:00:00 [xfs-cil/nvme0n1]
+root      1386     2  0 Mar04 ?        00:00:00 [xfs-reclaim/nvm]
+root      1387     2  0 Mar04 ?        00:00:00 [xfs-eofblocks/n]
+root      1388     2  0 Mar04 ?        00:00:00 [xfs-log/nvme0n1]
+root      1389     2  0 Mar04 ?        00:04:01 [xfsaild/nvme0n1]
+root      1390     2  0 Mar04 ?        00:00:15 [kworker/1:1H-kb]
+root      1451     1  0 Mar04 ?        00:01:13 /usr/lib/systemd/systemd-journald
+ccsadmin  1470 17636  0 06:14 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(57231) idle
+root      1734     1  0 Mar04 ?        00:00:00 /usr/sbin/lvmetad -f
+root      1760     1  0 Mar04 ?        00:00:01 /usr/lib/systemd/systemd-udevd
+root      1950     2  0 Mar04 ?        00:00:00 [ena]
+root      2017     2  0 Mar04 ?        00:00:12 [kworker/0:1H-kb]
+ccsadmin  2303 17636  0 07:20 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(33281) idle
+root      2688     2  0 Mar04 ?        00:00:00 [cryptd]
+root      2902     1  0 Mar04 ?        00:00:01 /sbin/auditd
+root      2970     2  0 Mar04 ?        00:00:00 [rpciod]
+root      2971     2  0 Mar04 ?        00:00:00 [kworker/u9:0]
+root      2972     2  0 Mar04 ?        00:00:00 [xprtiod]
+rpc       3028     1  0 Mar04 ?        00:00:00 /sbin/rpcbind -w
+dbus      3081     1  0 Mar04 ?        00:02:12 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+root      3122     1  0 Mar04 ?        00:00:01 /usr/sbin/sssd -i --logger=files
+ccsadmin  3155 17636  0 07:20 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(40901) idle
+ntp       3199     1  0 Mar04 ?        00:00:51 /usr/sbin/ntpd -u ntp:ntp -g
+root      3234     1  0 Mar04 ?        00:00:33 /usr/sbin/irqbalance --foreground
+rngd      3279     1  0 Mar04 ?        00:01:06 /sbin/rngd -f --fill-watermark=0 --exclude=jitter
+root      3385     1  0 Mar04 ?        00:00:00 /usr/sbin/gssproxy -D
+root      3414  3122  0 Mar04 ?        00:00:09 /usr/libexec/sssd/sssd_be --domain EDldap --uid 0 --gid 0 --logger=files
+root      3427  3122  0 Mar04 ?        00:00:06 /usr/libexec/sssd/sssd_nss --uid 0 --gid 0 --logger=files
+root      3428  3122  0 Mar04 ?        00:00:06 /usr/libexec/sssd/sssd_pam --uid 0 --gid 0 --logger=files
+root      3431     1  0 Mar04 ?        00:00:58 /usr/lib/systemd/systemd-logind
+root      3710     1  0 Mar04 ?        00:00:00 /sbin/dhclient -q -lf /var/lib/dhclient/dhclient--eth0.lease -pf /var/run/dhclient-eth0.pid eth0
+root      3747     1  0 Mar04 ?        00:00:01 /sbin/dhclient -6 -nw -lf /var/lib/dhclient/dhclient6--eth0.lease -pf /var/run/dhclient6-eth0.pid eth0
+root      3802     1  0 Mar04 ?        00:00:00 /usr/sbin/oddjobd -n -p /var/run/oddjobd.pid -t 300
+root      3870     1  0 Mar04 ?        02:34:44 /usr/bin/containerd
+root      4024     1  0 Mar04 ?        00:00:02 /usr/libexec/postfix/master -w
+ccsadmin  4025 17636  0 06:28 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(40103) idle
+postfix   4062  4024  0 Mar04 ?        00:00:00 qmgr -l -t unix -u
+root      4183     1  0 Mar04 ?        00:00:55 /usr/bin/amazon-ssm-agent
+root      4207     1  0 Mar04 ?        00:01:20 /usr/sbin/rsyslogd -n
+rpcuser   4285     1  0 Mar04 ?        00:00:00 /usr/sbin/rpc.statd
+root      4333     1  0 Mar04 ttyS0    00:00:00 /sbin/agetty --keep-baud 115200,38400,9600 ttyS0 vt220
+root      4340     1  0 Mar04 ?        00:00:01 /usr/sbin/crond -n
+root      4358     1  0 Mar04 tty1     00:00:00 /sbin/agetty --noclear tty1 linux
+root      4420     1  2 Mar04 ?        07:45:40 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+root      4466     1  0 Mar04 ?        00:02:19 /usr/sbin/automount --systemd-service --dont-check-daemon
+ccsadmin  4560 17636  0 08:13 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(48881) idle
+root      4693     2  0 Mar04 ?        00:00:05 [kworker/2:1H-kb]
+root      4771     1  0 Mar04 ?        00:00:00 /usr/sbin/sshd -D
+root      4851     2  0 Mar04 ?        00:00:37 bpfilter_umh
+root      4970  4183  0 Mar04 ?        00:00:31 /usr/bin/ssm-agent-worker
+root      5294     1  4 Mar04 ?        15:37:36 /usr/bin/kubelet --cloud-provider aws --config /etc/kubernetes/kubelet/kubelet-config.json --kubeconfig /var/lib/kubelet/kubeconfig --container-runtime docker --network-plugin cni --node-ip=100.66.2.4 --pod-infra-container-image=877085696533.dkr.ecr.af-south-1.amazonaws.com/eks/pause:3.1-eksbuild.1 --v=2
+root      5769     2  0 Mar04 ?        00:00:05 [kworker/3:1H-kb]
+root      5784  3870  0 Mar04 ?        00:00:26 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/b490f0ac721752b08f6a693ba1e56d031ee228d3e0717623584fc2de7088b056 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      5787  3870  0 Mar04 ?        00:00:27 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/7d72a40e3b755f45623e83d5803ac78afab4a6ca215d6eb203a62569e82d9982 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      5789  3870  0 Mar04 ?        00:00:24 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/fe09e78cc017daf88f617ff7b58986d6d821ed38f19cf77e1ffe6cd945461926 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      5834  3870  0 Mar04 ?        00:00:25 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/c6709f235ca981b1efdf7f299052f4ef6a914299637340560ad1de6aa8972618 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      5871  5787  0 Mar04 ?        00:00:00 /pause
+root      5926  5789  0 Mar04 ?        00:00:00 /pause
+root      5928     2  0 09:20 ?        00:00:00 [kworker/1:2-eve]
+root      5937  5834  0 Mar04 ?        00:00:00 /pause
+root      5974  5784  0 Mar04 ?        00:00:00 /pause
+root      6584  3870  0 Mar04 ?        00:00:28 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/c1ef31da55c667aa736dc828efe4f4cfdb3640e3ad3871864c21393a623a84a0 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      6622  3870  0 Mar04 ?        00:00:27 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/89303234811eec22635f99751de010cf28faa7e778e6ca22c1f6e0132caa23f3 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      6731  6584  0 Mar04 ?        00:03:00 kube-proxy --v=2 --config=/var/lib/kube-proxy-config/config
+root      6769  6622  0 Mar04 ?        00:11:45 /bin/aws-efs-csi-driver --endpoint=unix:/csi/csi.sock --logtostderr --v=2
+root      6882  6769  0 Mar04 ?        00:23:34 python3 /usr/bin/amazon-efs-mount-watchdog
+root      7542  3870  0 Mar04 ?        00:00:27 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/036253bb42e93628a5457632987469b802042b766931395f98d307316bd58496 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      7570  7542  0 Mar04 ?        00:00:20 /csi-node-driver-registrar --csi-address=/csi/csi.sock --kubelet-registration-path=/var/lib/kubelet/plugins/efs.csi.aws.com/csi.sock --v=2
+root      7783  3870  0 Mar04 ?        00:01:19 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/edf2e444fa60b0bf861e3ad3ed9618d25a7539fcd61c2b31be9b1d1ec2545f4f -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      7810  7783  0 Mar04 ?        00:16:13 /livenessprobe --csi-address=/csi/csi.sock --health-port=9809 --v=2
+postfix   7934  4024  0 08:28 ?        00:00:00 pickup -l -t unix -u
+root      8204  3870  0 Mar04 ?        00:07:36 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/26f8e45e2cdd35de259831ab15cf9281364e6be8796b459e3d7884cca9183f3b -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      8224  8204  0 Mar04 ?        00:00:07 /usr/local/bin/runsvdir -P /etc/service/enabled
+root      8369     2  0 09:21 ?        00:00:00 [kworker/3:1-eve]
+root      8390  3870  0 Mar04 ?        00:00:26 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/ac64f874a0aa325812b7c0d5f00fe926ea64bcef958c263249f3a03fe87b2f97 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      8407  8390  0 Mar04 ?        00:00:00 /pause
+root      8460  8224  0 Mar04 ?        00:00:00 runsv felix
+root      8461  8224  0 Mar04 ?        00:00:00 runsv monitor-addresses
+root      8462  8224  0 Mar04 ?        00:00:00 runsv allocate-tunnel-addrs
+root      8464  8461  0 Mar04 ?        00:01:25 calico-node -monitor-addresses
+root      8690  3870  0 Mar04 ?        00:00:28 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/1c8aeda8d1353f1814451799fee28ca677547aa679be41202bcba00f4ee16d46 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+chrony    8710  8690  0 Mar04 ?        00:00:19 /sbin/tini -- calico-typha
+chrony    8759  8710  0 Mar04 ?        00:22:14 calico-typha
+root      8891  3870  0 Mar16 ?        00:00:02 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/7ce40af287318e3ed055282d85e10c29064a5f51db2e814ab4fdd1940d8ec8b9 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root      8925  8460  1 Mar04 ?        03:27:32 calico-node -felix
+root      8932  8891  0 Mar16 ?        00:00:01 tini -- /fluentd/entrypoint.sh
+root      8965  8932  0 Mar16 ?        00:00:24 ruby /fluentd/vendor/bundle/ruby/2.6.0/bin/fluentd -c /fluentd/etc/fluent.conf -p /fluentd/plugins --gemfile /fluentd/Gemfile -r /fluentd/vendor/bundle/ruby/2.6.0/gems/fluent-plugin-elasticsearch-5.0.5/lib/fluent/plugin/elasticsearch_simple_sniffer.rb
+root      9033  8462  0 Mar04 ?        00:01:50 calico-node -allocate-tunnel-addrs
+root      9082  8965  0 Mar16 ?        00:12:29 /usr/local/bin/ruby -Eascii-8bit:ascii-8bit /fluentd/vendor/bundle/ruby/2.6.0/bin/fluentd -c /fluentd/etc/fluent.conf -p /fluentd/plugins --gemfile /fluentd/Gemfile -r /fluentd/vendor/bundle/ruby/2.6.0/gems/fluent-plugin-elasticsearch-5.0.5/lib/fluent/plugin/elasticsearch_simple_sniffer.rb --under-supervisor
+root     10124  3870  0 Mar04 ?        00:14:02 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/fe7913e70345b7e1187d329e554dbaa93de48b23415834e95d59b284cb543af3 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     10141 10124  0 Mar04 ?        00:00:00 bash /app/entrypoint.sh
+root     10192 10141  0 Mar04 ?        00:08:52 ./aws-k8s-agent
+root     10193 10141  0 Mar04 ?        00:00:00 tee -i aws-k8s-agent.log
+root     10556  3870  0 Mar04 ?        00:00:26 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/a5ecd4ecdba112f44c182ea9779fe6391a8a734e6a1e222d2a0ad0c9859bf887 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     10590 10556  0 Mar04 ?        00:00:00 /pause
+root     10944     2  0 08:55 ?        00:00:00 [kworker/0:0-cgr]
+ccsadmin 11047 17636  0 08:42 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(37977) idle
+root     12125     2  0 08:30 ?        00:00:00 [kworker/1:1-eve]
+ccsadmin 13348 17636  0 08:43 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(57145) idle
+root     13552     2  0 09:10 ?        00:00:00 [kworker/2:3-cgr]
+root     13716     2  0 09:23 ?        00:00:00 [kworker/u8:0-ev]
+root     15373     2  0 Mar13 ?        00:00:00 [jbd2/nvme6n1-8]
+root     15378     2  0 Mar13 ?        00:00:00 [ext4-rsv-conver]
+root     15398  3870  0 Mar13 ?        00:00:07 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/84b678c9572fcd5bf68c919c56228bca8f401b04b555c1e830563fd602d2ffd3 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     15434 15398  0 Mar13 ?        00:00:00 /pause
+root     15472     2  0 09:23 ?        00:00:00 [kworker/2:1-eve]
+root     16287  3870  0 Mar13 ?        00:04:18 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/a8d9a3587aaec1208fc7ca706abd45cc1876cc3041e86724687b4101cb14f099 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+ccsadmin 16324 16287  0 Mar13 ?        00:02:24 /opt/bitnami/repmgr/bin/repmgrd --pid-file=/opt/bitnami/repmgr/tmp/repmgr.pid -f /opt/bitnami/repmgr/conf/repmgr.conf --daemonize=false
+root     16380  3870  0 Mar13 ?        00:00:08 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/0a66e1117cc4c22c4d8bbbd36b5e91429b52ae8f6cb5d1ef6ec4ab6f8aa764dd -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337     16421 16380  0 Mar13 ?        00:02:11 /usr/local/bin/pilot-agent proxy sidecar --domain persistent.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+1337     16483 16421  0 Mar13 ?        00:19:17 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+ccsadmin 16965 17636  0 06:20 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(56683) idle
+ccsadmin 17050 17636  0 07:13 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(49771) idle
+root     17600     2  0 Mar04 ?        00:00:56 [jbd2/nvme4n1-8]
+root     17601     2  0 Mar04 ?        00:00:00 [ext4-rsv-conver]
+root     17620  3870  0 Mar04 ?        00:00:26 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/ad31cb37027910682fbfe3f40b0f16c72ca6f935274d5a1d1155918cdadd314b -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+ccsadmin 17636 16324  0 Mar13 ?        00:03:22 /opt/bitnami/postgresql/bin/postgres -D /bitnami/postgresql/data --config-file=/opt/bitnami/postgresql/conf/postgresql.conf --external_pid_file=/opt/bitnami/postgresql/tmp/postgresql.pid --hba_file=/opt/bitnami/postgresql/conf/pg_hba.conf
+ccsadmin 17637 17636  0 Mar13 ?        00:00:00 postgres: logger   
+ccsadmin 17638 17636  0 Mar13 ?        00:00:04 postgres: startup   recovering 000000010000000000000009
+ccsadmin 17639 17636  0 Mar13 ?        00:00:02 postgres: checkpointer   
+ccsadmin 17640 17636  0 Mar13 ?        00:00:02 postgres: background writer   
+ccsadmin 17641 17636  0 Mar13 ?        00:00:35 postgres: stats collector   
+ccsadmin 17642 17636  0 Mar13 ?        00:02:43 postgres: walreceiver   streaming 0/93B1650
+ccsadmin 17647 17636  0 Mar13 ?        00:02:01 postgres: repmgr repmgr postgres-ha-postgresql-ha-postgresql-2.postgres-ha-postgresql-ha-postgresql-headless.persistent.svc.cluster.local(47976) idle
+root     17663 17620  0 Mar04 ?        00:00:00 /pause
+ccsadmin 17754 17636  0 09:11 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(52629) idle
+ec2-user 17892 18299  0 Mar04 ?        00:04:17 /opt/couchbase/bin/goport -graceful-shutdown=false -window-size=524288
+ec2-user 17897 17892  1 Mar04 ?        05:55:23 /opt/couchbase/bin/indexer -adminPort=9100 -scanPort=9101 -httpPort=9102 -streamInitPort=9103 -streamCatchupPort=9104 -streamMaintPort=9105 -vbuckets=1024 -cluster=127.0.0.1:8091 -storageDir=/opt/couchbase/var/lib/couchbase/data/@2i -diagDir=/opt/couchbase/var/lib/couchbase/crash -nodeUUID=6bb991066056b03a1b4ce1ece8546621 -ipv6=false -isEnterprise=false
+ec2-user 17913 18299  0 Mar04 ?        00:00:51 /opt/couchbase/bin/goport -graceful-shutdown=false -window-size=524288
+root     17916  3870  0 Mar04 ?        00:00:27 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/0b603e4d763b65109ae4e28b60e20747d0065b87194dd09c448612c3a76d253e -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+ec2-user 17922 17913  1 Mar04 ?        04:06:07 /opt/couchbase/bin/projector -kvaddrs=127.0.0.1:11210 -adminport=:9999 -diagDir=/opt/couchbase/var/lib/couchbase/crash -ipv6=false 127.0.0.1:8091
+ec2-user 17953 18299  0 Mar04 ?        00:02:00 /opt/couchbase/bin/goport -graceful-shutdown=false -window-size=524288
+ec2-user 17958 17953  0 Mar04 ?        02:16:23 /opt/couchbase/bin/cbq-engine --datastore=http://127.0.0.1:8091 --http=:8093 --configstore=http://127.0.0.1:8091 --enterprise=false --ipv6=false
+root     17965 17916  0 Mar04 ?        00:00:08 runsvdir -P /etc/service log: ...........................................................................................................................................................................................................................................................................................................................................................................................................
+root     18030 17965  0 Mar04 ?        00:00:00 runsv couchbase-server
+ec2-user 18031 18030  0 Mar04 ?        00:10:54 /opt/couchbase/lib/erlang/erts-9.3.3.9/bin/beam.smp -A 16 -sbwt none -- -root /opt/couchbase/lib/erlang -progname erl -- -home /tmp -- -smp enable -kernel error_logger false inetrc "/opt/couchbase/etc/couchbase/hosts.cfg" dist_config_file "/opt/couchbase/var/lib/couchbase/config/dist_cfg" -sasl sasl_error_logger false -hidden -name babysitter_of_ns_1@cb.local -proto_dist cb -epmd_module cb_epmd -ssl_dist_optfile /opt/couchbase/etc/couchbase/ssl_dist_opts -setcookie nocookie -- -kernel global_enable_tracing false -noshell -noinput -run ns_babysitter_bootstrap -- -couch_ini /opt/couchbase/etc/couchdb/default.ini /opt/couchbase/etc/couchdb/default.d/capi.ini /opt/couchbase/etc/couchdb/default.d/geocouch.ini /opt/couchbase/etc/couchdb/local.ini -ns_babysitter cookiefile "/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie" -ns_babysitter nodefile "/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.node" -ns_babysitter pidfile "/opt/couchbase/var/lib/couchbase/couchbase-server.pid" -ns_server config_path "/opt/couchbase/etc/couchbase/static_config"
+ec2-user 18051 17965  0 Mar04 ?        00:00:05 /opt/couchbase/lib/erlang/erts-9.3.3.9/bin/epmd -daemon
+root     18066  3870  0 Mar04 ?        00:00:26 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/b7a3231f18633c6a0bf6347be45988239fa45f942cc91e73a9c44cbb8201fb17 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337     18119 18066  0 Mar04 ?        00:15:12 /usr/local/bin/pilot-agent proxy sidecar --domain persistent.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+1337     18181 18119  0 Mar04 ?        02:39:13 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+ec2-user 18299 18031  0 Mar04 ?        00:00:00 erl_child_setup 1048576
+ec2-user 18377 18299  7 Mar04 ?        1-00:13:51 /opt/couchbase/lib/erlang/erts-9.3.3.9/bin/beam.smp -A 16 -sbt u -P 327680 -K true -swt low -sbwt none -MMmcs 30 -e102400 -- -root /opt/couchbase/lib/erlang -progname erl -- -home /tmp -- -smp enable -setcookie nocookie -kernel error_logger false -sasl sasl_error_logger false -user user_io -run child_erlang child_start ns_bootstrap -- -smp enable -kernel error_logger false inetrc "/opt/couchbase/etc/couchbase/hosts.cfg" dist_config_file "/opt/couchbase/var/lib/couchbase/config/dist_cfg" -proto_dist cb -epmd_module cb_epmd -ssl_dist_optfile /opt/couchbase/etc/couchbase/ssl_dist_opts -kernel global_enable_tracing false -couch_ini /opt/couchbase/etc/couchdb/default.ini /opt/couchbase/etc/couchdb/default.d/capi.ini /opt/couchbase/etc/couchdb/default.d/geocouch.ini /opt/couchbase/etc/couchdb/local.ini
+ec2-user 18400 18377  0 Mar04 ?        00:00:00 erl_child_setup 1048576
+ec2-user 18477 18400  0 Mar04 ?        00:00:03 sh -s disksup
+ec2-user 18479 18400  0 Mar04 ?        00:00:00 /opt/couchbase/lib/erlang/lib/os_mon-2.4.4/priv/bin/cpu_sup
+ec2-user 18480 18400  0 Mar04 ?        00:00:14 /opt/couchbase/lib/erlang/lib/os_mon-2.4.4/priv/bin/memsup
+ec2-user 18514 18400  0 Mar04 ?        00:38:16 /opt/couchbase/lib/erlang/erts-9.3.3.9/bin/beam.smp -P 327680 -K true -- -root /opt/couchbase/lib/erlang -progname erl -- -home /tmp -- -pa /opt/couchbase/lib/erlang/lib/asn1-5.0.5.2/ebin /opt/couchbase/lib/erlang/lib/compiler-7.1.5.2/ebin /opt/couchbase/lib/erlang/lib/cosEvent-2.2.2/ebin /opt/couchbase/lib/erlang/lib/cosEventDomain-1.2.2/ebin /opt/couchbase/lib/erlang/lib/cosFileTransfer-1.2.2/ebin /opt/couchbase/lib/erlang/lib/cosNotification-1.2.3/ebin /opt/couchbase/lib/erlang/lib/cosProperty-1.2.3/ebin /opt/couchbase/lib/erlang/lib/cosTime-1.2.3/ebin /opt/couchbase/lib/erlang/lib/cosTransactions-1.3.3/ebin /opt/couchbase/lib/erlang/lib/crypto-4.2.2.2/ebin /opt/couchbase/lib/erlang/lib/dialyzer-3.2.4/ebin /opt/couchbase/lib/erlang/lib/diameter-2.1.4.1/ebin /opt/couchbase/lib/erlang/lib/edoc-0.9.2/ebin /opt/couchbase/lib/erlang/lib/eldap-1.2.3.1/ebin /opt/couchbase/lib/erlang/lib/erl_docgen-0.7.3/ebin /opt/couchbase/lib/erlang/lib/erl_interface-3.10.2.1/ebin /opt/couchbase/lib/erlang/lib/erts-9.3.3.9/ebin /opt/couchbase/lib/erlang/lib/eunit-2.3.5/ebin /opt/couchbase/lib/erlang/lib/hipe-3.17.1/ebin /opt/couchbase/lib/erlang/lib/ic-4.4.4.2/ebin /opt/couchbase/lib/erlang/lib/inets-6.5.2.4/ebin /opt/couchbase/lib/erlang/lib/mnesia-4.15.3.2/ebin /opt/couchbase/lib/erlang/lib/orber-3.8.4/ebin /opt/couchbase/lib/erlang/lib/os_mon-2.4.4/ebin /opt/couchbase/lib/erlang/lib/otp_mibs-1.1.2/ebin /opt/couchbase/lib/erlang/lib/parsetools-2.1.6/ebin /opt/couchbase/lib/erlang/lib/public_key-1.5.2/ebin /opt/couchbase/lib/erlang/lib/reltool-0.7.5/ebin /opt/couchbase/lib/erlang/lib/runtime_tools-1.12.5/ebin /opt/couchbase/lib/erlang/lib/sasl-3.1.2/ebin /opt/couchbase/lib/erlang/lib/snmp-5.2.11/ebin /opt/couchbase/lib/erlang/lib/ssh-4.6.9.3/ebin /opt/couchbase/lib/erlang/lib/ssl-8.2.6.4/ebin /opt/couchbase/lib/erlang/lib/syntax_tools-2.1.4.1/ebin /opt/couchbase/lib/erlang/lib/tools-2.11.2/ebin /opt/couchbase/lib/erlang/lib/xmerl-1.3.16.1/ebin /opt/couchbase/lib/couchdb/plugins/gc-couchbase-1.0.0/ebin /opt/couchbase/lib/couchdb/plugins/vtree-0.1.0/ebin /opt/couchbase/lib/couchdb/plugins/wkb-1.2.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/couch-1.2.0a-961ad59-git/ebin /opt/couchbase/lib/couchdb/erlang/lib/couch_audit-1.0.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/couch_dcp-1.0.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/couch_index_merger-1.0.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/couch_set_view-1.0.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/couch_view_parser-1.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/ejson-0.1.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/erlang-oauth/ebin /opt/couchbase/lib/couchdb/erlang/lib/etap/ebin /opt/couchbase/lib/couchdb/erlang/lib/lhttpc-1.3/ebin /opt/couchbase/lib/couchdb/erlang/lib/mapreduce-1.0/ebin /opt/couchbase/lib/couchdb/erlang/lib/mochiweb-1.4.1/ebin /opt/couchbase/lib/couchdb/erlang/lib/snappy-1.0.4/ebin /opt/couchbase/lib/ns_server/erlang/lib/ale/ebin /opt/couchbase/lib/ns_server/erlang/lib/gen_smtp/ebin /opt/couchbase/lib/ns_server/erlang/lib/ns_babysitter/ebin /opt/couchbase/lib/ns_server/erlang/lib/ns_couchdb/ebin /opt/couchbase/lib/ns_server/erlang/lib/ns_server/ebin /opt/couchbase/lib/erlang/lib/stdlib-3.4.5.1/ebin /opt/couchbase/lib/erlang/lib/kernel-5.4.3.2/ebin . -couch_ini /opt/couchbase/etc/couchdb/default.ini /opt/couchbase/etc/couchdb/default.d/capi.ini /opt/couchbase/etc/couchdb/default.d/geocouch.ini /opt/couchbase/etc/couchdb/local.ini -kernel error_logger false -kernel error_logger false inetrc "/opt/couchbase/etc/couchbase/hosts.cfg" dist_config_file "/opt/couchbase/var/lib/couchbase/config/dist_cfg" -kernel global_enable_tracing false -ssl_dist_optfile /opt/couchbase/etc/couchbase/ssl_dist_opts -name couchdb_ns_1@cb.local -smp enable -kernel error_logger false -sasl sasl_error_logger false -nouser -hidden -proto_dist cb -epmd_module cb_epmd -start_epmd false -setcookie nocookie -ns_couchdb cookiefile "/opt/couchbase/var/lib/couchbase/couchbase-server.babysitter.cookie" -run child_erlang child_start ns_couchdb
+ec2-user 18530 18514  0 Mar04 ?        00:00:00 erl_child_setup 1048576
+ec2-user 18678 18530  0 Mar04 ?        00:00:00 sh -s disksup
+ec2-user 18680 18530  0 Mar04 ?        00:00:00 /opt/couchbase/lib/erlang/lib/os_mon-2.4.4/priv/bin/memsup
+ec2-user 18681 18530  0 Mar04 ?        00:00:00 /opt/couchbase/lib/erlang/lib/os_mon-2.4.4/priv/bin/cpu_sup
+ec2-user 18720 18530  0 Mar04 ?        00:17:03 /opt/couchbase/bin/priv/godu
+ec2-user 18725 18400  0 Mar04 ?        00:00:03 sh -s ns_disksup
+ec2-user 18726 18400  0 Mar04 ?        00:00:00 /opt/couchbase/bin/priv/godu
+ec2-user 18731 18400  0 Mar04 ?        00:00:00 inet_gethost 4
+ec2-user 18732 18731  0 Mar04 ?        00:00:00 inet_gethost 4
+ec2-user 18740 18299  0 Mar04 ?        00:00:00 /opt/couchbase/bin/saslauthd-port
+ec2-user 18750 18400  0 Mar04 ?        00:11:05 portsigar for ns_1@cb.local 41
+ec2-user 18759 18299  0 Mar04 ?        00:01:58 /opt/couchbase/bin/goport -graceful-shutdown=false -window-size=524288
+ec2-user 18764 18759  0 Mar04 ?        00:34:28 /opt/couchbase/bin/goxdcr -sourceKVAdminPort=8091 -xdcrRestPort=9998 -isEnterprise=false -ipv6=false
+ec2-user 18774 18299  4 Mar04 ?        14:12:10 /opt/couchbase/bin/memcached -C /opt/couchbase/var/lib/couchbase/config/memcached.json
+ccsadmin 19024 17636  0 08:19 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(35037) idle
+ccsadmin 19900 17636  0 08:59 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(60891) idle
+root     20294     2  0 Mar09 ?        00:00:31 [jbd2/nvme5n1-8]
+root     20298     2  0 Mar09 ?        00:00:00 [ext4-rsv-conver]
+root     20323  3870  0 Mar09 ?        00:00:15 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/7f6c61b930ecaa62666fdc2126333c31fe5c68aeae92d88062f890c4de38f88e -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     20369 20323  0 Mar09 ?        00:00:00 /pause
+ec2-user 21367 18530  0 Mar04 ?        00:00:00 inet_gethost 4
+ec2-user 21368 21367  0 Mar04 ?        00:00:00 inet_gethost 4
+root     21477     2  0 09:00 ?        00:00:00 [kworker/u8:2-xf]
+root     21536  3870  0 Mar04 ?        00:00:25 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/39e5363ff5b688b6ac7d1c10db46e638f6256d20b0999de11b2fe22ff20182e9 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     21574 21536  0 Mar04 ?        00:00:00 /pause
+root     21849  3870  0 Mar09 ?        00:00:17 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/e4ed568b3e300b5e95d88f110c9824bae968e4dc3ef131e53a7332be4c0f017e -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+root     21892 21849  0 Mar09 ?        00:00:11 tini -- /usr/local/bin/startup.sh
+root     21925 21892  4 Mar09 ?        08:40:28 /opt/java/openjdk/bin/java -Xms128m --illegal-access=deny -XX:+ExitOnOutOfMemoryError -Dfile.encoding=UTF-8 -classpath /usr/local/zeebe/config:/usr/local/zeebe/lib/* -Dapp.name=broker -Dapp.pid=6 -Dapp.repo=/usr/local/zeebe/lib -Dapp.home=/usr/local/zeebe -Dbasedir=/usr/local/zeebe io.camunda.zeebe.broker.StandaloneBroker
+root     21960  3870  0 Mar09 ?        00:00:16 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/0e1a466c5f0ae14c3d5fdc48d45a3b56e23d11465c76380453aad284fa8572ba -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337     22009 21960  0 Mar09 ?        00:05:24 /usr/local/bin/pilot-agent proxy sidecar --domain bpmn.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+root     22049  3870  0 Mar04 ?        00:00:25 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/3b8dea54bb526b4307324cda343b5f8f51dbfb58be040fa5ee8d5b306e7c1dcc -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+nfsnobo+ 22082 22049  0 Mar04 ?        01:38:51 /bin/node_exporter --path.sysfs=/host/sys --path.rootfs=/host/root --no-collector.wifi --no-collector.hwmon --collector.filesystem.ignored-mount-points=^/(dev|proc|sys|var/lib/docker/.+|var/lib/kubelet/pods/.+)($|/) --collector.netclass.ignored-devices=^(veth.*)$
+1337     22086 22009  1 Mar09 ?        01:55:41 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+root     22121  3870  0 Mar04 ?        00:00:25 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/481f7787190806c2c4a8c6045091c7a9d166e1647d650712a1b9ee6e89972846 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337     22143 22121  0 Mar04 ?        00:08:04 /usr/local/bin/pilot-agent proxy sidecar --domain monitoring.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+1337     22221 22143  0 Mar04 ?        00:35:04 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+root     22485     2  0 09:26 ?        00:00:00 [kworker/3:2-eve]
+ccsadmin 24609 17636  0 08:21 ?        00:00:00 postgres: postgres midpoint ip-127-0-0-6.af-south-1.compute.internal(56915) idle
+root     25098  4771  0 09:27 ?        00:00:00 sshd: ec2-user [priv]
+ec2-user 25217 25098  0 09:27 ?        00:00:00 sshd: ec2-user@pts/0
+ec2-user 25218 25217  0 09:27 pts/0    00:00:00 -bash
+root     25480  3870  0 Mar06 ?        00:00:24 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/2ea18ef33cb8d27506d6a83989c2018bc526d81b625cec5f4c67d926e57fc8dc -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+100      25522 25480  0 Mar06 ?        00:00:00 /pause
+root     25814  3870  0 Mar06 ?        00:13:14 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/aae271d97fb3a645f8abe24c3a8ceea488ffbf8a35dfa8f94ee713625c0fe023 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+100      25845 25814  0 Mar06 ?        00:00:00 /bin/sh -ec cp /vault/config/extraconfig-from-values.hcl /tmp/storageconfig.hcl; [ -n "${HOST_IP}" ] && sed -Ei "s|HOST_IP|${HOST_IP?}|g" /tmp/storageconfig.hcl; [ -n "${POD_IP}" ] && sed -Ei "s|POD_IP|${POD_IP?}|g" /tmp/storageconfig.hcl; [ -n "${HOSTNAME}" ] && sed -Ei "s|HOSTNAME|${HOSTNAME?}|g" /tmp/storageconfig.hcl; [ -n "${API_ADDR}" ] && sed -Ei "s|API_ADDR|${API_ADDR?}|g" /tmp/storageconfig.hcl; [ -n "${TRANSIT_ADDR}" ] && sed -Ei "s|TRANSIT_ADDR|${TRANSIT_ADDR?}|g" /tmp/storageconfig.hcl; [ -n "${RAFT_ADDR}" ] && sed -Ei "s|RAFT_ADDR|${RAFT_ADDR?}|g" /tmp/storageconfig.hcl; /usr/local/bin/docker-entrypoint.sh vault server -config=/tmp/storageconfig.hcl  
+100      25881 25845  0 Mar06 ?        00:00:00 /usr/bin/dumb-init /bin/sh /usr/local/bin/docker-entrypoint.sh vault server -config=/tmp/storageconfig.hcl
+100      25883 25881  0 Mar06 ?        01:05:34 vault server -config=/tmp/storageconfig.hcl
+root     25902  3870  0 Mar06 ?        00:00:24 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/1263488e32c3ab58f8c30577f870ba10fff1fa91bf09f704e26a132c2ad8e616 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337     25950 25902  0 Mar06 ?        00:19:49 /usr/local/bin/pilot-agent proxy sidecar --domain persistent.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+root     25963     2  0 Mar04 ?        00:01:58 [jbd2/nvme3n1-8]
+root     25965     2  0 Mar04 ?        00:00:00 [ext4-rsv-conver]
+root     25982  3870  0 Mar04 ?        00:00:26 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/2ab5b6637541d7878b3f3bef77a03e106a8ff02aa3cca496e65817f010add70c -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+1337     26008 25950  0 Mar06 ?        00:46:38 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+ec2-user 26024 25982  0 Mar04 ?        00:00:00 /pause
+root     26578  3870  0 Mar04 ?        00:02:13 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/085df5cd95a792e37389516c3a9e1562fc5335062bbfb413ac008bb96d0c6ac3 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+ec2-user 26605 26578  0 Mar04 ?        00:00:00 /bin/bash ./opensearch-docker-entrypoint.sh opensearch
+root     26668  3870  0 Mar04 ?        00:00:27 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/c83ccfab206c042385afb1ed4686543df010d1969bd7899762446513bee36a1a -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+ec2-user 26695 26605  1 Mar04 ?        03:34:59 /usr/share/opensearch/jdk/bin/java -Xshare:auto -Dopensearch.networkaddress.cache.ttl=60 -Dopensearch.networkaddress.cache.negative.ttl=10 -XX:+AlwaysPreTouch -Xss1m -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djna.nosys=true -XX:-OmitStackTraceInFastThrow -XX:+ShowCodeDetailsInExceptionMessages -Dio.netty.noUnsafe=true -Dio.netty.noKeySetOptimization=true -Dio.netty.recycler.maxCapacityPerThread=0 -Dio.netty.allocator.numDirectArenas=0 -Dlog4j.shutdownHookEnabled=false -Dlog4j2.disable.jmx=true -Djava.locale.providers=SPI,COMPAT -Xms1g -Xmx1g -XX:+UseG1GC -XX:G1ReservePercent=25 -XX:InitiatingHeapOccupancyPercent=30 -Djava.io.tmpdir=/tmp/opensearch-15066586741840593572 -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=data -XX:ErrorFile=logs/hs_err_pid%p.log -Xlog:gc*,gc+age=trace,safepoint:file=logs/gc.log:utctime,pid,tags:filecount=32,filesize=64m -Dclk.tck=100 -Djdk.attach.allowAttachSelf=true -Djava.security.policy=/usr/share/opensearch/plugins/opensearch-performance-analyzer/pa_config/opensearch_security.policy -Dopensearch.cgroups.hierarchy.override=/ -Xmx512M -Xms512M -XX:MaxDirectMemorySize=268435456 -Dopensearch.path.home=/usr/share/opensearch -Dopensearch.path.conf=/usr/share/opensearch/config -Dopensearch.distribution.type=tar -Dopensearch.bundled_jdk=true -cp /usr/share/opensearch/lib/* org.opensearch.bootstrap.OpenSearch -Ecluster.initial_master_nodes=opensearch-cluster-master-0,opensearch-cluster-master-1,opensearch-cluster-master-2, -Ecluster.name=opensearch-cluster -Ediscovery.seed_hosts=opensearch-cluster-master-headless -Enode.roles=master,ingest,data,remote_cluster_client, -Enode.name=opensearch-cluster-master-0 -Enetwork.host=0.0.0.0
+ec2-user 26696 26605  0 Mar04 ?        00:00:00 /bin/sh /usr/share/opensearch/bin/performance-analyzer-agent-cli
+ec2-user 26698 26696  0 Mar04 ?        02:37:32 /usr/share/opensearch/jdk/bin/java -Xshare:auto -Xms4m -Xmx64m -XX:+UseSerialGC -Dlog4j.configurationFile=/usr/share/opensearch/plugins/opensearch-performance-analyzer/pa_config/log4j2.xml -Xms64M -Xmx64M -XX:+UseSerialGC -XX:CICompilerCount=1 -XX:-TieredCompilation -XX:InitialCodeCacheSize=4096 -XX:InitialBootClassLoaderMetaspaceSize=30720 -XX:MaxRAM=400m -Dopensearch.path.home=/usr/share/opensearch -Dopensearch.path.conf=/usr/share/opensearch/config -Dopensearch.distribution.type=tar -cp /usr/share/opensearch/lib/*:/usr/share/opensearch/performance-analyzer-rca/lib/* org.opensearch.performanceanalyzer.PerformanceAnalyzerApp
+1337     26741 26668  0 Mar04 ?        00:12:37 /usr/local/bin/pilot-agent proxy sidecar --domain logging.svc.cluster.local --proxyLogLevel=warning --proxyComponentLogLevel=misc:error --log_output_level=default:info --concurrency 2
+1337     26826 26741  0 Mar04 ?        01:32:00 /usr/local/bin/envoy -c etc/istio/proxy/envoy-rev0.json --restart-epoch 0 --drain-time-s 45 --drain-strategy immediate --parent-shutdown-time-s 60 --local-address-ip-version v4 --file-flush-interval-msec 1000 --disable-hot-restart --log-format %Y-%m-%dT%T.%fZ?%l?envoy %n?%v -l warning --component-log-level misc:error --concurrency 2
+root     27794     2  0 08:10 ?        00:00:00 [kworker/0:2-cgr]
+ccsadmin 28438 17636  0 08:49 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(51013) idle
+ccsadmin 29085 17636  0 09:29 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(51995) idle
+ccsadmin 30350 17636  0 08:11 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(55785) idle
+ccsadmin 30730 17636  0 07:45 ?        00:00:00 postgres: postgres midpoint 127.0.0.6(36331) idle
+root     30777     2  0 09:30 ?        00:00:00 [kworker/0:1-cgr]
+root     30778     2  0 09:30 ?        00:00:00 [kworker/0:3-cgr]
+root     31630 25218  0 09:30 pts/0    00:00:00 sudo ps -aef
+root     31631 31630  0 09:30 pts/0    00:00:00 ps -aef
+root     31999  3870  0 Mar06 ?        00:00:23 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/06da18f3037a5e2fa23468cd43a12b08e0d3b2cd214f0870cac3534d980adad5 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+100      32042 31999  0 Mar06 ?        00:00:00 /pause
+root     32623     2  0 05:21 ?        00:00:00 [kworker/3:0-eve]
+root     32674     2  0 Mar06 ?        00:00:11 [jbd2/nvme2n1-8]
+root     32676     2  0 Mar06 ?        00:00:00 [ext4-rsv-conver]
+root     32692  3870  0 Mar06 ?        00:00:24 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/48c60977ba387c4ee4ed0d376dfac911d3522c03c3273de02bb4f6370d37c531 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
+100      32728 32692  0 Mar06 ?        00:00:00 /pause
